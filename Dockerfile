@@ -1,8 +1,11 @@
 FROM node:lts
 
-WORKDIR /nextapp
-COPY ./nextapp/ ./
+ADD ./ /app-nextjs13
+WORKDIR /app-nextjs13/nextapp
 
 RUN apt-get update
+RUN npm install
+
+EXPOSE 3000
 
 CMD ["npm", "run", "dev"]
