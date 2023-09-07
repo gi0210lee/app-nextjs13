@@ -17,6 +17,7 @@ export default function RootLayout({ children }) {
         {children}
         <ul>
           <li><a href="/create">Create</a></li>
+          <li><a href="/read/1">Read</a></li>
           <li><a href="/update/1">Update</a></li>
           <li><input type="button" value="delete"></input></li>          
         </ul>
