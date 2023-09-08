@@ -1,10 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";
-
-export default function handler(req: NextApiRequest, res:NextApiResponse) {
-    
-    let json_response = {
-        status: 200,
-        results: 'hello'
-    }
-    return res.status(200).json(json_response)
+import { NextResponse } from 'next/server'
+ 
+export async function GET(request: Request) {
+  return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
 }
