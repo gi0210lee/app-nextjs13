@@ -1,5 +1,10 @@
-import { NextResponse } from "next/server";
+import { NextApiRequest, NextApiResponse } from "next";
 
-export default (req, res) => {
-    res.status(200).json({text: 'hello'})
+export default function handler(req: NextApiRequest, res:NextApiResponse) {
+    
+    let json_response = {
+        status: 200,
+        results: 'hello'
+    }
+    return res.json(json_response)
 }
