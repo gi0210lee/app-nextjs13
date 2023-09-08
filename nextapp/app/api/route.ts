@@ -6,5 +6,5 @@ export default function handler(req: NextApiRequest, res:NextApiResponse) {
         status: 200,
         results: 'hello'
     }
-    return res.json(json_response)
+    return res.status(200).json(json_response)
 }
