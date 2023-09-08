@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
 
-export async function GET(request: Request) {
-    return {'data':'hello'}
+export default (req, res) => {
+    res.status(200).json({text: 'hello'})
 }
