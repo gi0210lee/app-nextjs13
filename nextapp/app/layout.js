@@ -11,10 +11,10 @@ export default function RootLayout({ children }) {
     <html>
       <body>
         <h1><Link href="/">WEB</Link></h1>
-        <ul>
+        <ol>
           <li><Link href="/read/1">html</Link></li>
           <li><Link href="/read/2">css</Link></li>
-        </ul>
+        </ol>
         {children}
         <ul>
           <li><Link href="/create">Create</Link></li>
