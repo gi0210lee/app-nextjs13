@@ -1,4 +1,3 @@
-import { error } from "console";
 import Link from "next/link";
 
 export async function TodoList() {
