@@ -5,11 +5,10 @@ export async function TodoList() {
     const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "topics", {
       cache: "no-store",
     });
+    const topics = await res.json();
   } catch (err) {
-    return <></>;
+    return <>{err.message}</>;
   }
-
-  const topics = await res.json();
   return (
     <>
       <ol>
