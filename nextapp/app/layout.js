@@ -1,34 +1,22 @@
 import Link from "next/link";
 import "./globals.css";
-import { Control } from "./Control";
 
 export const metadata = {
   title: "Next13 Sample",
   description: "Next App",
 };
 
-export default async function RootLayout({ children }) {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "topics", {
-    cache: "no-store",
-  });
-  const topics = await res.json();
+export default function RootLayout({ children }) {
   return (
     <html>
       <body>
-        <h1>
-          <Link href="/">WEB</Link>
-        </h1>
-        <ol>
-          {topics.map((topic) => {
-            return (
-              <li key={topic.id}>
-                <Link href={`/read/${topic.id}`}>{topic.title}</Link>
-              </li>
-            );
-          })}
-        </ol>
+        <div>
+          <Link href="/">Home</Link>
+        </div>
+        <div>
+          <Link href="/create">Write</Link>
+        </div>
         {children}
-        <Control />
       </body>
     </html>
   );

@@ -8,16 +8,13 @@ export function Control() {
   const router = useRouter();
   const id = params.id;
   return (
-    <ul>
-      <li>
-        <Link href="/create">Create</Link>
-      </li>
+    <>
       {id ? (
         <>
-          <li>
+          <div>
             <Link href={`/update/${id}`}>Update</Link>
-          </li>
-          <li>
+          </div>
+          <div>
             <input
               type="button"
               value="delete"
@@ -33,9 +30,9 @@ export function Control() {
                   });
               }}
             ></input>
-          </li>
+          </div>
         </>
       ) : null}
-    </ul>
+    </>
   );
 }

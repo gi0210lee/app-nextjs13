@@ -1,13 +1,11 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { TodoList } from "./TodoList";
 
 export default function Home() {
   return (
     <>
-    <h2>Welcome!!!</h2>
-    Hello, WEB!
-    
-    <img src="/hello.png"></img>
+      <h2>To do List</h2>
+      <TodoList />
     </>
-  )
+  );
 }
-
