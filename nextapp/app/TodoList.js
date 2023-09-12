@@ -1,9 +1,15 @@
+import { error } from "console";
 import Link from "next/link";
 
 export async function TodoList() {
-  const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "topics", {
-    cache: "no-store",
-  });
+  try {
+    const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "topics", {
+      cache: "no-store",
+    });
+  } catch (err) {
+    return <></>;
+  }
+
   const topics = await res.json();
   return (
     <>
